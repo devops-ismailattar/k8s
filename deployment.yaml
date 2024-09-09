@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-2048
+  namespace: jenkins
 spec:
   selector:
     matchLabels:
@@ -23,6 +24,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-2048
+  namespace: jenkins
 spec:
   ports:
     - port: 80
